@@ -1,0 +1,226 @@
+/* styles.css */
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 45px;
+} */
+
+body {
+    background-image: url('/img/background.jpg'); /* 设置 body 元素的背景图片 */
+    background-size: cover; /* 让背景图片铺满整个屏幕 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+}
+
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* 使用半透明边框 */
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* 使用半透明背景 */
+    backdrop-filter: blur(5px); /* 设置背景模糊程度 */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.group-owner {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.group-owner img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 10px;
+    border: 3px solid #fff;
+}
+
+.qq-number-popup {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.admin-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.admins {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.admin {
+    text-align: center;
+    margin: 10px;
+    position: relative;
+}
+
+.admin img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 10px;
+    border: 3px solid #fff;
+}
+
+.admin-name {
+    cursor: pointer;
+}
+
+.admin .qq-number-popup {
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+.owner-name {
+font-size: 12px; /* 或者您希望的其他小字体大小 */
+color: #666; /* 小字体的颜色 */
+}
+footer {
+text-align: center;
+margin-top: 20px; /* 可根据需要调整顶部边距 */
+padding-bottom: 20px; /* 添加底部填充 */
+}
+.copyright {
+    font-size: 12px;
+    color: #000000;
+}
+
+/* .qq-groups {
+display: flex;
+flex-wrap: wrap;
+} */
+
+.qq-group {
+    margin-right: 20px; /* 控制每个 Q 群之间的间距 */
+    margin-bottom: 20px; /* 控制每行 Q 群之间的间距 */
+}
+
+.qq-group:last-child {
+    margin-right: 0;
+}
+
+.qq-group::after {
+content: "丨";
+color: #000000; /* 分割线颜色 */
+font-weight: bold; /* 加粗样式 */
+margin-left: 5px; /* 分割线与文本之间的间距 */
+}
+
+.qq-group:last-child::after {
+    content: "";
+}
+
+.qq-group {
+    color: #3597c4; /* 主色 */
+}
+
+.qq-group-number {
+    color: #000000; /* 对比色 */
+}
+
+
+/* 设置.overlay为flex布局，垂直水平居中 */
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* 设置.modal相对于.overlay的宽度和高度，同时设置最大宽度和最小宽度 */
+.modal {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 80%; /* 最大宽度为80% */
+    min-width: 300px; /* 最小宽度为300px */
+    max-height: 80%; /* 最大高度为80% */
+    overflow-y: auto; /* 当内容溢出时，显示滚动条 */
+}
+
+
+button {
+    margin-top: 20px; /* 调整确认按钮的上边距 */
+}
+
+/* 群二维码 */
+.qq-group-qrcode {
+    text-align: center; /* 图片居中 */
+    margin-top: 20px; /* 设置与其他内容的间距 */
+}
+
+.qq-group-qrcode img {
+    width: 200px; /* 设置图片宽度 */
+    height: auto; /* 让高度自适应 */
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.qq-group-number-container {
+    display: block;
+}
+
+.qq-group-number-container {
+    position: relative;
+    display: inline-block;
+}
+
+.qq-group-number-container::after {
+    content: "点击加群";
+    position: absolute;
+    top: -23px; /* 调整垂直位置 */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* 背景色 */
+    color: #fff; /* 文字颜色 */
+    padding: 5px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    font-size: 12px; /* 字体大小 */
+    display: none; /* 默认隐藏 */
+}
+
+.qq-group-number-container:hover::after {
+    display: block; /* 鼠标悬停时显示 */
+}

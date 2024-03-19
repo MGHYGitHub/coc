@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>布吉浪人部落-部落冲突</title>
+<link rel="stylesheet" href="./css/styles.css">
+<!-- 引用favicon.ico图标 -->
+<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="page-container">
+        <h1>布吉浪人部落Q群信息</h1>
+        <div class="qq-groups">
+            <div class="qq-group" style="text-align: center;">
+                Q群：<span class="qq-group-number-container">
+                    <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=7s8rg3EEp3jI22dcY7pTQtLlIVoXO22s&authKey=xjirBoM8UB4zzcUMbDqi1pQo%2B3BtX8vJw5LJ5PV%2FvntZdICshPME7rH12KJQYNXt&noverify=0&group_code=788384222" target="_blank">788384222</a>
+                </span>
+            </div>
+            <!-- <div class="qq-group">
+                Q群：<span class="qq-group-number-container">
+                    <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=7s8rg3EEp3jI22dcY7pTQtLlIVoXO22s&authKey=xjirBoM8UB4zzcUMbDqi1pQo%2B3BtX8vJw5LJ5PV%2FvntZdICshPME7rH12KJQYNXt&noverify=0&group_code=788384222" target="_blank">788384222</a>
+                </span>
+            </div> -->
+            <!-- ↑↑居中单独显示,调整css   .qq-groups↑↑ -->
+            <!-- <div class="qq-group">Q群：<span class="qq-group-number">788384222</span></div> -->
+            <!-- 添加更多QQ群 -->
+        </div>
+
+        <!-- 群主 -->
+        <div class="group-owner">
+            <h2>群主 <span class="owner-name">.</span></h2>
+            <img src="http://q1.qlogo.cn/g?b=qq&nk=1771019066&s=100" alt="Group Owner Avatar" onclick="showQQ('group-owner-qq', '1771019066')">
+            <div id="group-owner-qq" class="qq-number-popup">QQ号码: 加密QQ号码</div>
+        </div>
+
+        <!-- 管理员 -->
+        <div class="admin-title">
+            <h2>管理员</h2>
+        </div>
+        <div class="admins">
+            <div class="admin" id="admin-1">
+                <img src="http://q1.qlogo.cn/g?b=qq&nk=3059053749&s=100" alt="Admin Avatar" onclick="showQQ('admin-1-qq', '3059053749')">
+                <div id="admin-1-qq" class="qq-number-popup">QQ号码: 加密QQ号码</div>
+                <div class="admin-name" onclick="showQQ('admin-1-qq', '3059053749')">浪人</div>
+            </div>
+            <div class="admin" id="admin-2">
+                <img src="http://q1.qlogo.cn/g?b=qq&nk=2132833948&s=100" alt="Admin Avatar" onclick="showQQ('admin-2-qq', '2132833948')">
+                <div id="admin-2-qq" class="qq-number-popup">QQ号码: 加密QQ号码</div>
+                <div class="admin-name" onclick="showQQ('admin-2-qq', '2132833948')">。</div>
+            </div>
+            <div class="admin" id="admin-3">
+                <img src="http://q1.qlogo.cn/g?b=qq&nk=1938634053&s=100" alt="Admin Avatar" onclick="showQQ('admin-3-qq', '1938634053')">
+                <div id="admin-3-qq" class="qq-number-popup">QQ号码: 加密QQ号码</div>
+                <div class="admin-name" onclick="showQQ('admin-3-qq', '1938634053')">宁采臣</div>
+            </div>
+            <!-- 在此处添加更多管理员 -->
+        </div>
+
+        <!-- 群二维码 -->
+        <h2>Q群二维码</h2>
+        <div class="centered qq-group-qrcode" id="qqGroupQRCode" style="display: none;">
+            <img src="./img/qrcode.png" alt="群二维码">
+        </div>
+
+        <!-- 折叠/展开按钮 -->
+        <div class="centered">
+            <button onclick="toggleQRCode()">显示/隐藏Q群二维码</button>
+        </div>
+    </div>
+
+    <!-- 网页公告 -->
+    <div id="overlay" class="overlay">
+        <div id="modal" class="modal">
+          <h2>公告</h2>
+          <p>此为&nbsp;&nbsp;&nbsp;|布吉浪人|&nbsp;&nbsp;&nbsp;部落<br>最新的Q群发布以及简介等<br>重要事项：
+            <br>请所有成员在战斗前准备好您最强大的部队和阵容，以便我们可以取得胜利。
+            <br>请在战斗前与您的部落成员进行协作，制定战略并确定攻击目标。
+            <br>每个成员都有责任为部落做出贡献，请尽最大努力参与到这场冲突中来。
+            <br>如有任何疑问或需要帮助，请随时与部落领导或其他成员联系。
+            <br>我们的目标是胜利！让我们团结一心，战胜我们的对手！祝我们好运！</p>
+          <button onclick="closeModal()">确认</button> <!-- 添加确认按钮 -->
+        </div>
+    </div>
+
+    <!-- 版权 -->
+    <footer>
+        <div class="copyright">
+            &copy; 2024 🍊Oranges. 保留所有权利.
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>
